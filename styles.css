@@ -66,8 +66,9 @@ body {
   color: white;
 }
 
-.calculator-grid .operator:hover {
+.calculator-grid .operator:hover, .calculator-grid .operator:active {
   background-color: rgba(255, 115, 0, 0.945);
+  color: white;
 }
 
 .span-two {
