@@ -1,20 +1,79 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .calculator-grid {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: mixmax(120px,auto) repeat(5, 100px);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: mixmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid black;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.calculator-grid > button:active {
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px;
+  transform: translateY(2px);
+}
+
+.calculator-grid .equals:hover {
+  background-color: rgba(44, 139, 44, 0.6);
+  color: black;
+}
+
+.calculator-grid .equals:active {
+  background-color: rgba(44, 139, 44, 0.8);
+  color: white;
+}
+
+.calculator-grid .ac:hover {
+  background-color: rgba(248, 78, 78, 0.699);
+  color: black;
+}
+.calculator-grid .del:hover {
+    background-color: rgb(255, 187, 0);
+    color: black;
+}
+.calculator-grid .del:active {
+    background-color: rgb(255, 150, 0);
+    color: white;
+}
+.calculator-grid .ac:active {
+  background-color: rgba(245, 40, 40, 0.747);
+  color: white;
+}
+
+.calculator-grid .operator:hover {
+  background-color: rgba(255, 115, 0, 0.945);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
 }
