@@ -13,12 +13,17 @@ class Calculator {
 
   delete() {}
 
-  appendNumber(number) {}
+  appendNumber(number) {
+    if (number ==='.' && this.currentOperand.includes('.')) return
+    this.currentOperand =this.currentOperand.toString() + number.toString()
+  }
   chooseOperation(operation) {}
 
   compute() {}
 
-  updateDisplay() {}
+  updateDisplay() {
+    this.currentOperandTextElement.innerText = this.currentOperand
+  }
 }
 const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
